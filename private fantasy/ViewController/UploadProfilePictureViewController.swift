@@ -8,6 +8,9 @@
 import UIKit
 import Firebase
 import CropViewController
+import FirebaseFirestoreSwift
+import FirebaseFirestore
+import FirebaseAuth
 
 class UploadProfilePictureViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, CropViewControllerDelegate  {
     
@@ -16,21 +19,30 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
     @IBOutlet weak var mProfilePic: UIImageView!
     @IBOutlet weak var uplaodBtn: UIButton!
     @IBOutlet weak var continueBtn: UIView!
-    
+    var isImageUpdated = false
     
     override func viewDidLoad() {
         mView.layer.cornerRadius = 12
         mView.dropShadow()
         
         mProfilePic.makeRounded()
-        
         continueBtn.layer.cornerRadius = 20
         
-        uplaodBtn.layer.borderWidth = 1
         uplaodBtn.layer.cornerRadius = 8
         
-        
+        continueBtn.isUserInteractionEnabled = true
+        continueBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(continueBtnClicked)))
     }
+    
+    @objc func continueBtnClicked(){
+        if isImageUpdated {
+            self.beRootScreen(mIdentifier: Constants.StroyBoard.choosePFMViewController)
+        }
+        else {
+            showSnack(messages: "Please Upload Profile Picture")
+        }
+    }
+    
     @IBAction func uploadProfilePictureBtnClicked(_ sender: Any) {
         changeProfilePic()
     }
@@ -119,6 +131,7 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
                 User.data?.profilePicture  = downloadURL
                 Firestore.firestore().collection("Users").document(Auth.auth().currentUser!.uid).setData(["profilePicture" : downloadURL], merge: true) { err in
                     self.ProgressHUDHide()
+                    self.isImageUpdated = true
                     if err == nil{
                         
                         self.showSnack(messages: "Updated")

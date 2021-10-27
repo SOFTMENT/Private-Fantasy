@@ -15,6 +15,11 @@ struct Constants {
         static let signInViewController = "signInVC"
         static let homeViewController = "homeVC"
         static let uploadProfileViewController = "uploadProfileVC"
+        static let preparingQuestionViewController = "preparingQuestionVC"
+        static let qnaViewController = "qnaVC"
+        static let choosePFMViewController = "choosePFMVC"
+        static let pfmResultViewController = "pfmresultVC"
+        static let chatHomeViewController = "chatHomeVC"
     }
     
 }

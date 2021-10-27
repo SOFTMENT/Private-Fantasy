@@ -17,6 +17,8 @@ final class User : NSObject, Codable{
     var uid : String?
     var registrationDate : Date?
     var hasMembership : Bool?
+    var token : String?
+    var hasPlayed : Bool?
     
     private static var userData : User?
     
@@ -35,9 +37,4 @@ final class User : NSObject, Codable{
        
     }
     
-     
-    
-
-
-
 }

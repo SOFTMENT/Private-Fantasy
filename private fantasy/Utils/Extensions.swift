@@ -11,6 +11,9 @@ import Firebase
 import MBProgressHUD
 import FirebaseFirestoreSwift
 import TTGSnackbar
+import FirebaseAuth
+import FirebaseFirestoreSwift
+import FirebaseFirestore
 
 
 
@@ -29,6 +32,40 @@ extension UITextView {
 }
 
 extension UITextField {
+    
+    /// set icon of 20x20 with left padding of 8px
+    func setLeftIcons(icon: UIImage) {
+        
+        let padding = 8
+        let size = 20
+        
+        let outerView = UIView(frame: CGRect(x: 0, y: 0, width: size+padding, height: size) )
+        let iconView  = UIImageView(frame: CGRect(x: padding, y: 0, width: size, height: size))
+        iconView.image = icon
+        outerView.addSubview(iconView)
+        
+        leftView = outerView
+        leftViewMode = .always
+    }
+    
+    
+    
+    
+    /// set icon of 20x20 with left padding of 8px
+    func setRightIcons(icon: UIImage) {
+        
+        let padding = 8
+        let size = 12
+        
+        let outerView = UIView(frame: CGRect(x: 0, y: 0, width: size+padding, height: size) )
+        let iconView  = UIImageView(frame: CGRect(x: -padding, y: 0, width: size, height: size))
+        iconView.image = icon
+        outerView.addSubview(iconView)
+        
+        rightView = outerView
+        rightViewMode = .always
+    }
+    
     func setLeftPaddingPoints(_ amount:CGFloat){
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
         self.leftView = paddingView
@@ -70,15 +107,61 @@ extension AuthErrorCode {
 
 
 
+extension Date {
+
+    func timeAgoSinceDate() -> String {
+
+        // From Time
+        let fromDate = self
+
+        // To Time
+        let toDate = Date()
+
+        // Estimation
+        // Year
+        if let interval = Calendar.current.dateComponents([.year], from: fromDate, to: toDate).year, interval > 0  {
+
+            return interval == 1 ? "\(interval)" + " " + "year ago" : "\(interval)" + " " + "years ago"
+        }
+
+        // Month
+        if let interval = Calendar.current.dateComponents([.month], from: fromDate, to: toDate).month, interval > 0  {
+
+            return interval == 1 ? "\(interval)" + " " + "month ago" : "\(interval)" + " " + "months ago"
+        }
+
+        // Day
+        if let interval = Calendar.current.dateComponents([.day], from: fromDate, to: toDate).day, interval > 0  {
+
+            return interval == 1 ? "\(interval)" + " " + "day ago" : "\(interval)" + " " + "days ago"
+        }
+
+        // Hours
+        if let interval = Calendar.current.dateComponents([.hour], from: fromDate, to: toDate).hour, interval > 0 {
+
+            return interval == 1 ? "\(interval)" + " " + "hour ago" : "\(interval)" + " " + "hours ago"
+        }
+
+        // Minute
+        if let interval = Calendar.current.dateComponents([.minute], from: fromDate, to: toDate).minute, interval > 0 {
+
+            return interval == 1 ? "\(interval)" + " " + "minute ago" : "\(interval)" + " " + "minutes ago"
+        }
+
+        return "a moment ago"
+    }
+}
+
+
+
 
 extension UIViewController {
     
-    
-        func sendPushNotification() {
+    func sendPushNotification() {
         
         //1. Create the alert controller.
         let alert = UIAlertController(title: "Notification", message: "Send Notification to All Users", preferredStyle: .alert)
-
+        
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
             textField.placeholder = "Enter Title"
@@ -87,13 +170,13 @@ extension UIViewController {
         alert.addTextField { (textField) in
             textField.placeholder = "Enter Message"
         }
-
+        
         // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "Send", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0].text?.trimmingCharacters(in: .whitespacesAndNewlines) // Force unwrapping because we know it exists.
             let textField1 = alert?.textFields![1].text?.trimmingCharacters(in: .whitespacesAndNewlines)
             if (!textField!.isEmpty && !textField1!.isEmpty) {
-                PushNotificationSender().sendPushNotification(title: textField!, body: textField1!)
+                PushNotificationSender().sendPushNotificationToTopic(title: textField!, body: textField1!)
                 self.showToast(message: "Notification has been sent")
             }
             else {
@@ -102,15 +185,62 @@ extension UIViewController {
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-         
+            
             alert.dismiss(animated: true, completion: nil)
         }))
-
+        
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
         
     }
     
+    
+    public func logout(){
+        do {
+            try Auth.auth().signOut()
+            self.beRootScreen(mIdentifier: Constants.StroyBoard.signInViewController)
+        }
+        catch {
+            
+        }
+    }
+//        func sendPushNotification() {
+//        
+//        //1. Create the alert controller.
+//        let alert = UIAlertController(title: "Notification", message: "Send Notification to All Users", preferredStyle: .alert)
+//
+//        //2. Add the text field. You can configure it however you need.
+//        alert.addTextField { (textField) in
+//            textField.placeholder = "Enter Title"
+//        }
+//        //2. Add the text field. You can configure it however you need.
+//        alert.addTextField { (textField) in
+//            textField.placeholder = "Enter Message"
+//        }
+//
+//        // 3. Grab the value from the text field, and print it when the user clicks OK.
+//        alert.addAction(UIAlertAction(title: "Send", style: .default, handler: { [weak alert] (_) in
+//            let textField = alert?.textFields![0].text?.trimmingCharacters(in: .whitespacesAndNewlines) // Force unwrapping because we know it exists.
+//            let textField1 = alert?.textFields![1].text?.trimmingCharacters(in: .whitespacesAndNewlines)
+//            if (!textField!.isEmpty && !textField1!.isEmpty) {
+//                PushNotificationSender().sendPushNotification(title: textField!, body: textField1!)
+//                self.showToast(message: "Notification has been sent")
+//            }
+//            else {
+//                self.showToast(message: "Please Enter Title & Message")
+//            }
+//        }))
+//        
+//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+//         
+//            alert.dismiss(animated: true, completion: nil)
+//        }))
+//
+//        // 4. Present the alert.
+//        self.present(alert, animated: true, completion: nil)
+//        
+//    }
+//    
     func ProgressHUDShow(text : String) {
         let loading = MBProgressHUD.showAdded(to: self.view, animated: true)
         loading.mode = .indeterminate
@@ -152,6 +282,7 @@ extension UIViewController {
     
     func sendEmailVerificationLink(goBack : Bool) {
         
+        
         Auth.auth().currentUser!.sendEmailVerification { (error) in
                 
         }
@@ -175,10 +306,16 @@ extension UIViewController {
     
 
     
-    func getUserData(uid : String)  {
-        ProgressHUDShow(text: "Loading...")
+    func getUserData(uid : String, showProgress : Bool)  {
+        if showProgress {
+            ProgressHUDShow(text: "Loading...")
+        }
+      
         Firestore.firestore().collection("Users").document(uid).getDocument { (snapshot, error) in
-            MBProgressHUD.hide(for: self.view, animated: true)
+            if showProgress {
+                MBProgressHUD.hide(for: self.view, animated: true)
+            }
+           
             if error != nil {
                 self.showError(error!.localizedDescription)
             }
@@ -187,7 +324,19 @@ extension UIViewController {
                     User.data = user
                     if let profilePicture = user.profilePicture {
                         if profilePicture != "" {
+                            if let hasPlayed = user.hasPlayed  {
+                                if hasPlayed  {
+                                    self.beRootScreen(mIdentifier: Constants.StroyBoard.chatHomeViewController)
+                                }
+                                else {
+                                    self.beRootScreen(mIdentifier: Constants.StroyBoard.choosePFMViewController)
+                                }
+                            }
+                            else {
+                                self.beRootScreen(mIdentifier: Constants.StroyBoard.choosePFMViewController)
+                            }
                             
+                           
                         }
                         else {
                             self.beRootScreen(mIdentifier: Constants.StroyBoard.uploadProfileViewController)
@@ -256,6 +405,21 @@ extension UIViewController {
             
         case Constants.StroyBoard.uploadProfileViewController:
             return (mainStoryboard.instantiateViewController(identifier: mIdentifier) as? UploadProfilePictureViewController)!
+            
+        case Constants.StroyBoard.preparingQuestionViewController:
+            return (mainStoryboard.instantiateViewController(identifier: mIdentifier) as? PreparingQuestionViewController)!
+            
+        case Constants.StroyBoard.qnaViewController:
+            return (mainStoryboard.instantiateViewController(identifier: mIdentifier) as? QuestionsAnswersViewController)!
+            
+        case Constants.StroyBoard.choosePFMViewController:
+            return (mainStoryboard.instantiateViewController(identifier: mIdentifier) as? ChoosePFMViewController)!
+            
+        case Constants.StroyBoard.pfmResultViewController:
+            return (mainStoryboard.instantiateViewController(identifier: mIdentifier) as? PFMResultViewController)!
+            
+        case Constants.StroyBoard.chatHomeViewController:
+            return (mainStoryboard.instantiateViewController(identifier: mIdentifier) as? ChatHomeViewController)!
 
         default:
             return (mainStoryboard.instantiateViewController(identifier: Constants.StroyBoard.signInViewController) as? SignInViewController)!
@@ -390,5 +554,15 @@ extension UIView {
                layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
    
+    public var safeAreaFrame: CGFloat {
+        if #available(iOS 13.0, *) {
+            let window = UIApplication.shared.windows[0]
+            return window.safeAreaInsets.bottom
+        }
+        else  {
+            let window = UIApplication.shared.keyWindow
+            return window!.safeAreaInsets.bottom
+        }
+    }
 }
 

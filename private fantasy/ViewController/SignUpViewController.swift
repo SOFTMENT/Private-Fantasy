@@ -8,6 +8,9 @@
 import UIKit
 import Firebase
 import FirebaseFirestoreSwift
+import FirebaseAuth
+import FirebaseFirestore
+import IQKeyboardManagerSwift
 
 
 class SignUpViewController: UIViewController {
@@ -68,10 +71,7 @@ class SignUpViewController: UIViewController {
         signUpBtn.isUserInteractionEnabled = true
         signUpBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(signUp)))
         
-        
-        view.isUserInteractionEnabled = true
-        view.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(hideKeyboard)))
-        
+     
         maleBtn.isUserInteractionEnabled = true
         maleBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(maleSelected)))
         
@@ -81,7 +81,17 @@ class SignUpViewController: UIViewController {
         otherBtn.isUserInteractionEnabled = true
         otherBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(otherSelected)))
         
+        
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
+        mView.isUserInteractionEnabled = true
+        
+        
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        IQKeyboardManager.shared.enable = false
     }
     
     @objc func signUp() {

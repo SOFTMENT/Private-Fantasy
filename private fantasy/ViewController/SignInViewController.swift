@@ -6,7 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
 import Firebase
+import IQKeyboardManagerSwift
 
 class SignInViewController: UIViewController {
 
@@ -15,33 +17,13 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var etEmail: UITextField!
     @IBOutlet weak var etPassword: UITextField!
     @IBOutlet weak var signUp: UILabel!
-    let userDefaults = UserDefaults.standard
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        if userDefaults.value(forKey: "appFirstTimeOpend") == nil {
-            //if app is first time opened then it will be nil
-            userDefaults.setValue(true, forKey: "appFirstTimeOpend")
-            // signOut from FIRAuth
-            do {
-                try Auth.auth().signOut()
-            }catch {
-
-            }
-            // go to beginning of app
-        }
-        
-        
-        if Auth.auth().currentUser != nil {
-            
-            if Auth.auth().currentUser!.isEmailVerified {
-                
-               self.getUserData(uid: Auth.auth().currentUser!.uid)
-            }
-        }
-        
+  
         
         signInView.layer.cornerRadius = 20
         mView.layer.cornerRadius = 12
@@ -53,6 +35,9 @@ class SignInViewController: UIViewController {
         etEmail.setLeftPaddingPoints(10)
         etEmail.setRightPaddingPoints(10)
         
+        etEmail.delegate = self
+        etPassword.delegate = self
+        
         etPassword.setLeftPaddingPoints(10)
         etPassword.setRightPaddingPoints(10)
         
@@ -62,10 +47,18 @@ class SignInViewController: UIViewController {
         signUp.isUserInteractionEnabled = true
         signUp.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gotoSignUpScreen)))
         
-        
-        
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
         
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        IQKeyboardManager.shared.enable = false
+    }
+    
+    @objc func hideKeyboard(){
+        self.view.endEditing(true)
     }
     
     @objc func signInBtnClicked(){
@@ -95,7 +88,7 @@ class SignInViewController: UIViewController {
                     }
                     
                     if user.isEmailVerified {
-                        self.getUserData(uid: user.uid)
+                        self.getUserData(uid: user.uid, showProgress: true)
                     }
                     else {
                         self.sendEmailVerificationLink(goBack: false)
@@ -115,3 +108,9 @@ class SignInViewController: UIViewController {
 
 }
 
+
+extension SignInViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+    }
+}

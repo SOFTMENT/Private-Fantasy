@@ -9,6 +9,8 @@ import UIKit
 import FirebaseFirestoreSwift
 import Firebase
 import StoreKit
+import FirebaseFirestore
+import FirebaseAuth
 
 public typealias SuccessBlock = () -> Void
 public typealias FailureBlock = (Error?) -> Void

@@ -7,6 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1809C0262715E3CB00B95A4C /* CheckoutHeadCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C0252715E3CB00B95A4C /* CheckoutHeadCollectionCell.swift */; };
+		1809C02827161F3A00B95A4C /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C02727161F3700B95A4C /* OrderHistoryViewController.swift */; };
+		1809C02A27161FE400B95A4C /* OrderHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C02927161FE400B95A4C /* OrderHistoryTableViewCell.swift */; };
+		1809C02C271638FD00B95A4C /* OrderHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C02B271638FD00B95A4C /* OrderHistory.swift */; };
+		1809C02E271641B200B95A4C /* MenAndWomenLingerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C02D271641B100B95A4C /* MenAndWomenLingerieViewController.swift */; };
+		1809C0302716491200B95A4C /* ManageSexualServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C02F2716491200B95A4C /* ManageSexualServicesViewController.swift */; };
+		1809C03227164E4100B95A4C /* ManageSexualServicesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C03127164E4100B95A4C /* ManageSexualServicesTableCell.swift */; };
+		1809C0342716521900B95A4C /* SexualServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C0332716521900B95A4C /* SexualServicesViewController.swift */; };
+		180BA8A62712440C000469AD /* SexToysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BA8A52712440C000469AD /* SexToysViewController.swift */; };
+		182DFBCA26BB140C00F3A480 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFBC926BB140C00F3A480 /* WelcomeViewController.swift */; };
+		182DFBCC26BB28BF00F3A480 /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFBCB26BB28BF00F3A480 /* ResultsCell.swift */; };
+		182DFBCE26BB33F400F3A480 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFBCD26BB33F400F3A480 /* MessageCell.swift */; };
+		182DFBD026BB347B00F3A480 /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFBCF26BB347B00F3A480 /* ChatScreenViewController.swift */; };
+		182DFBD226BB34C900F3A480 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFBD126BB34C900F3A480 /* Messages.swift */; };
+		182DFBD426BB4DCA00F3A480 /* HomeChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFBD326BB4DCA00F3A480 /* HomeChatCell.swift */; };
+		182DFBD626BB4E1600F3A480 /* ChatHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFBD526BB4E1600F3A480 /* ChatHomeViewController.swift */; };
+		182DFBD826BB4E5400F3A480 /* LastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFBD726BB4E5400F3A480 /* LastMessage.swift */; };
+		18409695271396B400BBEAE2 /* SexToysAdminPanelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18409694271396B400BBEAE2 /* SexToysAdminPanelCell.swift */; };
+		18409698271397CA00BBEAE2 /* ManageSexToysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18409697271397CA00BBEAE2 /* ManageSexToysViewController.swift */; };
+		1840969A2713B73800BBEAE2 /* MyGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184096992713B73700BBEAE2 /* MyGesture.swift */; };
+		1840969C2714C82700BBEAE2 /* AddSexToysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840969B2714C82700BBEAE2 /* AddSexToysViewController.swift */; };
+		1840969E2714CF1400BBEAE2 /* AddSexToysImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840969D2714CF1400BBEAE2 /* AddSexToysImageViewController.swift */; };
+		184096A02715AC6600BBEAE2 /* AdminDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840969F2715AC6500BBEAE2 /* AdminDashboardViewController.swift */; };
+		184096A22715B36C00BBEAE2 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184096A12715B36C00BBEAE2 /* CheckoutViewController.swift */; };
+		1844CDF82712EBC800E94B1F /* SexToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844CDF72712EBC800E94B1F /* SexToy.swift */; };
+		1844CDFA2713311E00E94B1F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844CDF92713311D00E94B1F /* SettingsViewController.swift */; };
+		18A9309426B9CCE40035203A /* loading_lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 18A9309326B9CCE40035203A /* loading_lottie.json */; };
+		18A9309626B9CEBD0035203A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9309526B9CEBD0035203A /* Question.swift */; };
+		18A9309826B9D4DE0035203A /* ChoosePFMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9309726B9D4DE0035203A /* ChoosePFMViewController.swift */; };
+		18A9309A26BA1CE20035203A /* QuestionsAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9309926BA1CE20035203A /* QuestionsAnswersViewController.swift */; };
+		18A9309C26BA5CB10035203A /* QuestionsAnswersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9309B26BA5CB10035203A /* QuestionsAnswersCell.swift */; };
+		18A9309E26BA94190035203A /* find_people_lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 18A9309D26BA94180035203A /* find_people_lottie.json */; };
+		18A930A026BA94800035203A /* FindingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9309F26BA94800035203A /* FindingProfileViewController.swift */; };
+		18A930A226BA98DE0035203A /* ChoicesProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A930A126BA98DE0035203A /* ChoicesProfile.swift */; };
+		18A930A426BA9ECB0035203A /* PFMResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A930A326BA9ECB0035203A /* PFMResultViewController.swift */; };
+		18BA047D27122D8600D0146A /* SexToysCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA047C27122D8600D0146A /* SexToysCollectionViewCell.swift */; };
+		18BA047F2712380300D0146A /* ShopChoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA047E2712380300D0146A /* ShopChoicesViewController.swift */; };
 		1B16C3DEDBE9405DA41C5183 /* Pods_private_fantasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B0FE94947A8A9257AF124E /* Pods_private_fantasy.framework */; };
 		FE00C1A126B2641D0086368E /* UploadProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE00C1A026B2641C0086368E /* UploadProfilePictureViewController.swift */; };
 		FE00C1A326B301B00086368E /* find_lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = FE00C1A226B301AF0086368E /* find_lottie.json */; };
@@ -38,6 +75,43 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1809C0252715E3CB00B95A4C /* CheckoutHeadCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutHeadCollectionCell.swift; sourceTree = "<group>"; };
+		1809C02727161F3700B95A4C /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
+		1809C02927161FE400B95A4C /* OrderHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		1809C02B271638FD00B95A4C /* OrderHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistory.swift; sourceTree = "<group>"; };
+		1809C02D271641B100B95A4C /* MenAndWomenLingerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenAndWomenLingerieViewController.swift; sourceTree = "<group>"; };
+		1809C02F2716491200B95A4C /* ManageSexualServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSexualServicesViewController.swift; sourceTree = "<group>"; };
+		1809C03127164E4100B95A4C /* ManageSexualServicesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSexualServicesTableCell.swift; sourceTree = "<group>"; };
+		1809C0332716521900B95A4C /* SexualServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexualServicesViewController.swift; sourceTree = "<group>"; };
+		180BA8A52712440C000469AD /* SexToysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexToysViewController.swift; sourceTree = "<group>"; };
+		182DFBC926BB140C00F3A480 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		182DFBCB26BB28BF00F3A480 /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
+		182DFBCD26BB33F400F3A480 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		182DFBCF26BB347B00F3A480 /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
+		182DFBD126BB34C900F3A480 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		182DFBD326BB4DCA00F3A480 /* HomeChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChatCell.swift; sourceTree = "<group>"; };
+		182DFBD526BB4E1600F3A480 /* ChatHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHomeViewController.swift; sourceTree = "<group>"; };
+		182DFBD726BB4E5400F3A480 /* LastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastMessage.swift; sourceTree = "<group>"; };
+		18409694271396B400BBEAE2 /* SexToysAdminPanelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexToysAdminPanelCell.swift; sourceTree = "<group>"; };
+		18409697271397CA00BBEAE2 /* ManageSexToysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSexToysViewController.swift; sourceTree = "<group>"; };
+		184096992713B73700BBEAE2 /* MyGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGesture.swift; sourceTree = "<group>"; };
+		1840969B2714C82700BBEAE2 /* AddSexToysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSexToysViewController.swift; sourceTree = "<group>"; };
+		1840969D2714CF1400BBEAE2 /* AddSexToysImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSexToysImageViewController.swift; sourceTree = "<group>"; };
+		1840969F2715AC6500BBEAE2 /* AdminDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDashboardViewController.swift; sourceTree = "<group>"; };
+		184096A12715B36C00BBEAE2 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		1844CDF72712EBC800E94B1F /* SexToy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexToy.swift; sourceTree = "<group>"; };
+		1844CDF92713311D00E94B1F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		18A9309326B9CCE40035203A /* loading_lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_lottie.json; sourceTree = "<group>"; };
+		18A9309526B9CEBD0035203A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		18A9309726B9D4DE0035203A /* ChoosePFMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePFMViewController.swift; sourceTree = "<group>"; };
+		18A9309926BA1CE20035203A /* QuestionsAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAnswersViewController.swift; sourceTree = "<group>"; };
+		18A9309B26BA5CB10035203A /* QuestionsAnswersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAnswersCell.swift; sourceTree = "<group>"; };
+		18A9309D26BA94180035203A /* find_people_lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = find_people_lottie.json; sourceTree = "<group>"; };
+		18A9309F26BA94800035203A /* FindingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindingProfileViewController.swift; sourceTree = "<group>"; };
+		18A930A126BA98DE0035203A /* ChoicesProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesProfile.swift; sourceTree = "<group>"; };
+		18A930A326BA9ECB0035203A /* PFMResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFMResultViewController.swift; sourceTree = "<group>"; };
+		18BA047C27122D8600D0146A /* SexToysCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexToysCollectionViewCell.swift; sourceTree = "<group>"; };
+		18BA047E2712380300D0146A /* ShopChoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopChoicesViewController.swift; sourceTree = "<group>"; };
 		6EBB201CDA89FD70A4BD4594 /* Pods-private fantasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-private fantasy.release.xcconfig"; path = "Target Support Files/Pods-private fantasy/Pods-private fantasy.release.xcconfig"; sourceTree = "<group>"; };
 		C0B0FE94947A8A9257AF124E /* Pods_private_fantasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_private_fantasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A7B88D7DCEDB2011894249 /* Pods-private fantasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-private fantasy.debug.xcconfig"; path = "Target Support Files/Pods-private fantasy/Pods-private fantasy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +159,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18409693271396A200BBEAE2 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				18409694271396B400BBEAE2 /* SexToysAdminPanelCell.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		184096962713978400BBEAE2 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				18409697271397CA00BBEAE2 /* ManageSexToysViewController.swift */,
+				1840969B2714C82700BBEAE2 /* AddSexToysViewController.swift */,
+				1840969D2714CF1400BBEAE2 /* AddSexToysImageViewController.swift */,
+				1840969F2715AC6500BBEAE2 /* AdminDashboardViewController.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
 		CACCF23B338968AF78446AA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +226,8 @@
 				FEBA75D926B0833100D6162B /* SceneDelegate.swift */,
 				FEBA761126B09F1400D6162B /* GoogleService-Info.plist */,
 				FE00C1A226B301AF0086368E /* find_lottie.json */,
+				18A9309326B9CCE40035203A /* loading_lottie.json */,
+				18A9309D26BA94180035203A /* find_people_lottie.json */,
 				FEBA75E526B0833900D6162B /* Info.plist */,
 			);
 			path = "private fantasy";
@@ -145,6 +240,7 @@
 				FEBA75EE26B0885500D6162B /* Constants.swift */,
 				FEBA75F026B0888000D6162B /* IAPManager.swift */,
 				FEBA75F226B088A200D6162B /* PushNotificationSender.swift */,
+				184096992713B73700BBEAE2 /* MyGesture.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -154,6 +250,12 @@
 			children = (
 				FEBA75F526B088CD00D6162B /* Root.swift */,
 				FEBA75F926B08A0700D6162B /* User.swift */,
+				18A9309526B9CEBD0035203A /* Question.swift */,
+				18A930A126BA98DE0035203A /* ChoicesProfile.swift */,
+				182DFBD126BB34C900F3A480 /* Messages.swift */,
+				182DFBD726BB4E5400F3A480 /* LastMessage.swift */,
+				1844CDF72712EBC800E94B1F /* SexToy.swift */,
+				1809C02B271638FD00B95A4C /* OrderHistory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,10 +263,26 @@
 		FEBA75F726B0891700D6162B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				184096962713978400BBEAE2 /* Admin */,
 				FEBA75DB26B0833100D6162B /* SignInViewController.swift */,
 				FEBA761426B0CB2F00D6162B /* SignUpViewController.swift */,
 				FE00C1A026B2641C0086368E /* UploadProfilePictureViewController.swift */,
 				FE00C1A426B3067F0086368E /* PreparingQuestionViewController.swift */,
+				18A9309726B9D4DE0035203A /* ChoosePFMViewController.swift */,
+				18A9309926BA1CE20035203A /* QuestionsAnswersViewController.swift */,
+				18A9309F26BA94800035203A /* FindingProfileViewController.swift */,
+				18A930A326BA9ECB0035203A /* PFMResultViewController.swift */,
+				182DFBC926BB140C00F3A480 /* WelcomeViewController.swift */,
+				182DFBCF26BB347B00F3A480 /* ChatScreenViewController.swift */,
+				182DFBD526BB4E1600F3A480 /* ChatHomeViewController.swift */,
+				18BA047E2712380300D0146A /* ShopChoicesViewController.swift */,
+				180BA8A52712440C000469AD /* SexToysViewController.swift */,
+				1844CDF92713311D00E94B1F /* SettingsViewController.swift */,
+				184096A12715B36C00BBEAE2 /* CheckoutViewController.swift */,
+				1809C02727161F3700B95A4C /* OrderHistoryViewController.swift */,
+				1809C02D271641B100B95A4C /* MenAndWomenLingerieViewController.swift */,
+				1809C02F2716491200B95A4C /* ManageSexualServicesViewController.swift */,
+				1809C0332716521900B95A4C /* SexualServicesViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -172,9 +290,18 @@
 		FEBA75F826B0893900D6162B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18409693271396A200BBEAE2 /* Admin */,
 				FEBA75DD26B0833100D6162B /* Main.storyboard */,
 				FEBA75E026B0833900D6162B /* Assets.xcassets */,
 				FEBA75E226B0833900D6162B /* LaunchScreen.storyboard */,
+				18A9309B26BA5CB10035203A /* QuestionsAnswersCell.swift */,
+				182DFBCB26BB28BF00F3A480 /* ResultsCell.swift */,
+				182DFBCD26BB33F400F3A480 /* MessageCell.swift */,
+				182DFBD326BB4DCA00F3A480 /* HomeChatCell.swift */,
+				18BA047C27122D8600D0146A /* SexToysCollectionViewCell.swift */,
+				1809C0252715E3CB00B95A4C /* CheckoutHeadCollectionCell.swift */,
+				1809C02927161FE400B95A4C /* OrderHistoryTableViewCell.swift */,
+				1809C03127164E4100B95A4C /* ManageSexualServicesTableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A9309426B9CCE40035203A /* loading_lottie.json in Resources */,
 				FE00C1A326B301B00086368E /* find_lottie.json in Resources */,
 				FEBA760F26B08D3000D6162B /* SF-Pro-Display-Semibold.otf in Resources */,
 				FEBA75E426B0833900D6162B /* LaunchScreen.storyboard in Resources */,
@@ -271,6 +399,7 @@
 				FEBA75DF26B0833100D6162B /* Main.storyboard in Resources */,
 				FEBA760826B08D3000D6162B /* SF-Pro-Display-Regular.otf in Resources */,
 				FEBA760626B08D3000D6162B /* SF-Pro-Display-Heavy.otf in Resources */,
+				18A9309E26BA94190035203A /* find_people_lottie.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,18 +470,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BA047D27122D8600D0146A /* SexToysCollectionViewCell.swift in Sources */,
+				184096A22715B36C00BBEAE2 /* CheckoutViewController.swift in Sources */,
 				FEBA75F126B0888000D6162B /* IAPManager.swift in Sources */,
+				1840969A2713B73800BBEAE2 /* MyGesture.swift in Sources */,
+				182DFBD226BB34C900F3A480 /* Messages.swift in Sources */,
+				1809C03227164E4100B95A4C /* ManageSexualServicesTableCell.swift in Sources */,
+				182DFBCA26BB140C00F3A480 /* WelcomeViewController.swift in Sources */,
 				FEBA75F626B088CD00D6162B /* Root.swift in Sources */,
 				FE00C1A126B2641D0086368E /* UploadProfilePictureViewController.swift in Sources */,
+				1809C02E271641B200B95A4C /* MenAndWomenLingerieViewController.swift in Sources */,
+				18A9309C26BA5CB10035203A /* QuestionsAnswersCell.swift in Sources */,
+				1840969C2714C82700BBEAE2 /* AddSexToysViewController.swift in Sources */,
+				18BA047F2712380300D0146A /* ShopChoicesViewController.swift in Sources */,
+				18A9309A26BA1CE20035203A /* QuestionsAnswersViewController.swift in Sources */,
 				FE00C1A526B306800086368E /* PreparingQuestionViewController.swift in Sources */,
+				180BA8A62712440C000469AD /* SexToysViewController.swift in Sources */,
+				1809C02A27161FE400B95A4C /* OrderHistoryTableViewCell.swift in Sources */,
+				1809C02827161F3A00B95A4C /* OrderHistoryViewController.swift in Sources */,
 				FEBA75F326B088A200D6162B /* PushNotificationSender.swift in Sources */,
 				FEBA75EF26B0885500D6162B /* Constants.swift in Sources */,
 				FEBA761526B0CB2F00D6162B /* SignUpViewController.swift in Sources */,
+				18409695271396B400BBEAE2 /* SexToysAdminPanelCell.swift in Sources */,
+				182DFBD626BB4E1600F3A480 /* ChatHomeViewController.swift in Sources */,
+				182DFBD826BB4E5400F3A480 /* LastMessage.swift in Sources */,
 				FEBA75DC26B0833100D6162B /* SignInViewController.swift in Sources */,
+				182DFBCE26BB33F400F3A480 /* MessageCell.swift in Sources */,
+				1809C0262715E3CB00B95A4C /* CheckoutHeadCollectionCell.swift in Sources */,
+				18A930A026BA94800035203A /* FindingProfileViewController.swift in Sources */,
+				1844CDF82712EBC800E94B1F /* SexToy.swift in Sources */,
+				1844CDFA2713311E00E94B1F /* SettingsViewController.swift in Sources */,
+				18A9309626B9CEBD0035203A /* Question.swift in Sources */,
+				1809C0342716521900B95A4C /* SexualServicesViewController.swift in Sources */,
+				18A9309826B9D4DE0035203A /* ChoosePFMViewController.swift in Sources */,
 				FEBA75FA26B08A0700D6162B /* User.swift in Sources */,
+				184096A02715AC6600BBEAE2 /* AdminDashboardViewController.swift in Sources */,
+				18A930A226BA98DE0035203A /* ChoicesProfile.swift in Sources */,
 				FEBA75D826B0833100D6162B /* AppDelegate.swift in Sources */,
+				182DFBCC26BB28BF00F3A480 /* ResultsCell.swift in Sources */,
+				18A930A426BA9ECB0035203A /* PFMResultViewController.swift in Sources */,
+				1840969E2714CF1400BBEAE2 /* AddSexToysImageViewController.swift in Sources */,
+				1809C0302716491200B95A4C /* ManageSexualServicesViewController.swift in Sources */,
 				FEBA75DA26B0833100D6162B /* SceneDelegate.swift in Sources */,
+				182DFBD026BB347B00F3A480 /* ChatScreenViewController.swift in Sources */,
+				182DFBD426BB4DCA00F3A480 /* HomeChatCell.swift in Sources */,
 				FEBA75ED26B0879400D6162B /* Extensions.swift in Sources */,
+				18409698271397CA00BBEAE2 /* ManageSexToysViewController.swift in Sources */,
+				1809C02C271638FD00B95A4C /* OrderHistory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +666,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "private fantasy/private fantasy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = EC9SN5W46D;
 				INFOPLIST_FILE = "private fantasy/Info.plist";
@@ -510,6 +675,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.04;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.private-fantasy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -525,6 +691,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "private fantasy/private fantasy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = EC9SN5W46D;
 				INFOPLIST_FILE = "private fantasy/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -532,6 +699,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.04;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.private-fantasy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
